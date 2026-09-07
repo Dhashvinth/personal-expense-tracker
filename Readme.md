@@ -1,5 +1,8 @@
 # Personal Expense Tracker
 
+**Live Demo: ** Open the deployed Streamlit application
+The live version runs with sample expense data for demonstration. The repository also contains the MySQL/SQL implementation used for database-backed analysis.
+
 A simple personal expense analysis application built using **Python, Streamlit, MySQL, SQL, Pandas, and Plotly**.
 
 I created this project to practice working with transaction data, storing data in a relational database, querying it using SQL, and presenting the results through an interactive Streamlit dashboard.
