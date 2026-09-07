@@ -1,11 +1,14 @@
 import pymysql
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
-HOST = "localhost"
-USER = "root"
-PASSWORD = "Dhashvinth"      # Change if your MySQL password is different
-DATABASE = "expense_new"
+HOST = os.getenv("DB_HOST")
+USER = os.getenv("DB_USER")
+PASSWORD = os.getenv("DB_PASSWORD")
+DATABASE = os.getenv("DB_NAME")
 
 
 def create_connection():
