@@ -23,12 +23,16 @@ st.markdown("---")
 
 # ---------------- DATABASE ---------------- #
 
-connection = create_connection()
-cursor = connection.cursor()
+try:
+    connection = create_connection()
+    df = fetch_data(connection)
 
-create_table(cursor)
-connection.commit()
+    if df.empty:
+        df = generate_expense_data()
 
+except Exception:
+    df = generate_expense_data()
+    st.info("Demo mode: displaying sample expense data.")
 # ---------------- SIDEBAR ---------------- #
 
 st.sidebar.title("Settings")
